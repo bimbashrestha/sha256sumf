@@ -74,7 +74,7 @@ def main():
         "sha256sumf",
         description=
         "A simple command line utility for producing recursive SHA 256 checksums of folders "
-        "using file contents and sub-paths. Performs identically to the original sha256sum " 
+        "using file contents and sub-paths. Performs identically to the original sha256sum "
         "when used on a single file.",
     )
     parser.add_argument(
