@@ -71,7 +71,7 @@ def sha256sumf(args):
 
 def main():
     parser = argparse.ArgumentParser(
-        "sha256sumf",
+        "sha256sumf v" + __version__,
         description=
         "A simple command line utility for producing recursive SHA 256 checksums of folders "
         "using file contents and sub-paths. Performs identically to the original sha256sum "
