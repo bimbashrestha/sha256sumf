@@ -19,4 +19,5 @@ setup(
     long_description=long_descr,
     long_description_content_type="text/markdown",
     author="Bimba Shrestha",
+    url="https://github.com/bimbashrestha/sha256sumf",
 )
