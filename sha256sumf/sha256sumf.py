@@ -3,12 +3,21 @@
 
 from __future__ import print_function
 
-__version__ = "1.0.1"
+__version__ = "1.0.3"
 
 import os
 import sys
+import signal
 import argparse
 import hashlib
+
+
+def signal_handler(_1, _2):
+    print("")
+    sys.exit(0)
+
+
+signal.signal(signal.SIGINT, signal_handler)
 
 CHUNK_SIZE = 2**17
 
