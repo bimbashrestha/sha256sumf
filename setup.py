@@ -11,7 +11,7 @@ with open("README.md", "rb") as f:
     long_descr = f.read().decode("utf-8")
 
 setup(
-    name="cmdline-sha256sumf",
+    name="sha256sumf",
     packages=["sha256sumf"],
     entry_points={"console_scripts": ['sha256sumf = sha256sumf.sha256sumf:main']},
     version=version,
