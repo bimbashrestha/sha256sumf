@@ -20,4 +20,5 @@ setup(
     long_description_content_type="text/markdown",
     author="Bimba Shrestha",
     url="https://github.com/bimbashrestha/sha256sumf",
+    install_requires=["progress"],
 )

@@ -11,6 +11,8 @@ import signal
 import argparse
 import hashlib
 
+from progress.bar import Bar
+
 
 def signal_handler(_1, _2):
     print("")
@@ -48,12 +50,15 @@ def sha256sumf_update_on_file(shasum, path):
 
 def sha256sumf_folder(args):
     paths = sorted(get_paths(args.path))
+    bar = Bar("Processing", max=len(paths))
     shasum = hashlib.sha256()
     for path in paths:
         root_path = path[len(args.path):]
         shasum.update(root_path.encode())
         if os.path.isfile(path):
             sha256sumf_update_on_file(shasum, path)
+        bar.next()
+    bar.finish()
     print(shasum.hexdigest() + "  " + os.path.basename(args.path))
 
 
